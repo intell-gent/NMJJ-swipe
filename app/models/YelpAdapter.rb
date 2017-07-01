@@ -2,6 +2,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 require 'json'
+require 'dotenv/load'
 class YelpAdapter
 
   def initialize
