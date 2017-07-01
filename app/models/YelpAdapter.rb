@@ -5,7 +5,7 @@ require 'json'
 class YelpAdapter
 
   def initialize
-    @api_key = "temp"
+    @api_key = ENV["API_KEY"]
   end
 
   def place_search(city, district, offset = 0)
