@@ -2,6 +2,8 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 require 'json'
+require 'dotenv/load'
+
 class YelpAdapter
 
   def initialize
@@ -19,6 +21,7 @@ class YelpAdapter
     request["postman-token"] = 'eb3fb1cf-465a-093a-e6e1-fd8cade51817'
     response = http.request(request)
     @data_set = response.read_body
+
   end
 
   def data_set
@@ -33,3 +36,5 @@ class YelpAdapter
   # end
 
 end
+# test = YelpAdapter.new
+# p test.place_search("san francisco", "soma")
